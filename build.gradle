@@ -52,7 +52,7 @@ task buildImage(type: com.bmuschko.gradle.docker.tasks.image.DockerBuildImage) {
   inputDir = createDockerfile.destFile.get().asFile.parentFile
   //TODO: cambiar aqui el tag al correcto (debes usar tu usuario de Docker Hub) 
 //  tags.add('pereda/devops-frontend:' + project.version.toLowerCase())
-  tags.add('quay.io/godo_godines/team1-frontend:' + project.version.toLowerCase())
+  tags.add('pereda/team1-frontend:' + project.version.toLowerCase())
 }
 
 task pushImage(type: com.bmuschko.gradle.docker.tasks.image.DockerPushImage) {
