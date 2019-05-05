@@ -9,7 +9,7 @@ pipeline {
     stage('build') {
       //Puedo establecer variables de ambiente
       environment {
-        CONTAINER_REGISTRY_URL=https://quay.io
+        CONTAINER_REGISTRY_URL = 'https://quay.io'
       }
       steps { 
         withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'registry_credentials_id', usernameVariable: 'CONTAINER_REGISTRY_USERNAME', passwordVariable: 'CONTAINER_REGISTRY_PASSWORD']]) {
